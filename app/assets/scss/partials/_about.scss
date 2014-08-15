@@ -1,0 +1,57 @@
+.about {
+    margin-top: 100px;
+    @include outer-container();
+
+    img {
+        position: absolute;
+        left: -57%;
+        top: 0%;
+        @include size(auto 650px);
+        z-index: 9999;
+
+        @include media(max-width 1200px) {
+            left: -50%;
+        }
+
+        @include media(max-width 1000px) {
+            display: none;
+        }
+
+    }
+
+    .about-content {
+        @include span-columns(9);
+        @include shift(3);
+
+        @include media(max-width 1200px) {
+            @include span-columns(8);
+            @include shift(3.5);
+        }
+
+        @include media(max-width 1050px) {
+            @include span-columns(7);
+            @include shift(4);
+        }
+
+        @include media(max-width 1000px) {
+            @include span-columns(8);
+            @include shift(2);
+        }
+
+        @include media(max-width 750px) {
+            @include span-columns(9);
+            @include shift(1.5);
+        }
+
+        @include media(max-width 450px) {
+            @include span-columns(10);
+            @include shift(1);
+        }
+
+    }
+
+    h3 {
+        color: $medium-gray;
+        font-size: em(20);
+    }
+}

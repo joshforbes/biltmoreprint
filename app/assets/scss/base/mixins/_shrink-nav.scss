@@ -1,0 +1,24 @@
+@mixin shrink-nav() {
+    $nav-small-height: 40px;
+
+    height: $nav-small-height;
+    border-top: 0px;
+    margin-top: 0px;
+
+
+    .logo {
+        background-image: url('/img/logosmall.png');
+        background-position: center;
+        height: $nav-small-height;
+    }
+
+    nav a {
+        margin-top: 0;
+        line-height: 40px;
+        border-right: 0;
+    }
+
+    .phone {
+        display: none;
+    }
+}

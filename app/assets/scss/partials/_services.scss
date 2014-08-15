@@ -1,0 +1,148 @@
+.service {
+    padding-top: 6.25em;
+    padding-bottom: 6.25em;
+    background-color: lighten($light-gray, 10%);
+    overflow-x: hidden;
+    @include clearfix();
+
+    .service-belt {
+        width: 200%;
+        position: relative;
+        left: 0%;
+        @include transition(all 700ms linear);
+    }
+
+    h3 {
+        color: $primary-color;
+        font-size: 1.375em;
+        margin: .3125em 0em;
+    }
+
+    i {
+        position: absolute;
+        top: 10%;
+        left: 0;
+        font-size: 3em;
+        color: transparentize($accent-color, .3);
+
+        @include media(max-width 600px) {
+            left: 2%;
+        }
+    }
+
+    .thumb-wrap, .service-wrap {
+        width: 50%;
+        float: left;
+    }
+
+    .service-thumb-container {
+        @include outer-container();
+        position: relative;
+
+    }
+
+
+    .service-thumb {
+        @include span-columns(6);
+        @include omega(2n);
+        position: relative;
+        margin-bottom: 2.5em;
+        padding: 0 em(20) 0 em(10);
+
+        p {
+            margin-bottom: em(5);
+        }
+
+        @include media(max-width 1120px) {
+            @include span-columns(10);
+            @include shift(1);
+        }
+
+        @include media(max-width 600px) {
+            @include span-columns(12);
+            @include shift(0);
+        }
+    }
+
+    .service-thumb-text {
+        margin-left: 5.3125em;
+    }
+
+    a {
+        color: $accent-color;
+        &:hover {
+            color: darken($accent-color, 5);
+        }
+    }
+
+    .service-container {
+        position: relative;
+        background-color: lighten($light-gray, 10%);
+        display: none;
+
+        article {
+            @include span-columns(5.5);
+            @include shift(3.5);
+            position: relative;
+
+            @include media(max-width 1200px) {
+                @include span-columns(6);
+                @include shift(3);
+            }
+
+            @include media(max-width 900px) {
+                @include span-columns(7);
+                @include shift(2.5);
+            }
+
+            @include media(max-width 650px) {
+                @include span-columns(8);
+                @include shift(2);
+            }
+
+            @include media(max-width 450px) {
+                @include span-columns(9);
+                @include shift(1.5);
+            }
+        }
+
+        h3 {
+            margin-left: 2.5em;
+            margin-bottom: .75em;
+        }
+
+
+        img {
+            display: block;
+            background-color: $medium-gray;
+            margin: 0 auto 1em;
+        }
+
+        i {
+            font-size: 2em;
+            left: 0%;
+            top: -.3%;
+        }
+
+        .icon-cancel-circled2 {
+            left: 92%;
+            top: .2%;
+            color: transparentize($medium-gray, .6);
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        ul {
+            margin-bottom: 1em;
+        }
+
+        li {
+            list-style: disc;
+            list-style-position: inside;
+        }
+
+    }
+
+}

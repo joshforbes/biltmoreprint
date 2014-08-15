@@ -1,0 +1,18 @@
+
+//Bower Components
+@import "../bower/normalize-css/normalize";
+@import "../bower/bourbon/dist/bourbon";
+@import "base/base";
+@import "../bower/neat/app/assets/stylesheets/neat";
+
+//Paritals
+@import "partials/header";
+@import "partials/hero";
+@import "partials/section";
+@import "partials/about";
+@import "partials/services";
+@import "partials/recent-work";
+
+
+
+

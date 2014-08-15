@@ -1,0 +1,59 @@
+.hero {
+    background: url('/img/herobg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    width: 100%;
+    height: em(650);
+    overflow: hidden;
+
+    .splash {
+        color: white;
+        margin-top: em(300);
+        text-align: center;
+    }
+
+    .highlight-one {
+        font-weight: 600;
+        color: $cyan;
+    }
+
+    .highlight-two {
+        font-weight: 600;
+        color: $yellow;
+    }
+
+    h2 {
+        font-size: em(60);
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: em(50px);
+        margin-bottom: 20px;
+    }
+
+    .highlight-background {
+        background-color: transparentize($primary-color, .2);
+        padding: 0 em(10);
+    }
+
+    button {
+        background-color: $accent-color;
+        padding: 1em;
+        font-size: em(20);
+
+        i {
+            margin-right: em(5);
+            position: relative;
+            top: em(3);
+        }
+
+        &:hover {
+            background-color: darken($accent-color, 2);
+        }
+
+
+    }
+
+
+
+}

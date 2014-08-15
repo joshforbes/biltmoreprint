@@ -1,0 +1,151 @@
+header {
+    $navigation-logo-width: 150px;
+    $navigation-item-width: 110px;
+    $navigation-item-width-medium: 90px;
+    $navigation-item-width-small: 75px;
+    $navigation-color: $primary-color;
+    $navigation-color-hover: lighten($primary-color, 50%);
+    $header-height: 185px;
+    $border-height-top: 30px;
+    $border-height-bottom: 0px;
+    $navigation-height: $header-height - $border-height-bottom - $border-height-top;
+
+    font-family: $header-font-family;
+    font-size: 18px;
+    letter-spacing: 1.3px;
+
+    background-color: lighten($light-gray, 10%);
+
+    height: $header-height;
+    position: fixed;
+    width: 100%;
+
+    border-top: $border-height-top solid $primary-color;
+    border-bottom: $border-height-bottom solid $primary-color;
+
+    z-index: 11000;
+    @include transition(all .25s linear);
+
+    nav {
+        width: 90%;
+        margin: 0 auto;
+
+        @include media(max-width 1000px) {
+            width: 95%;
+            font-size: 16px;
+        }
+    }
+
+    ul {
+        float: right;
+        padding: 0;
+        list-style: none;
+        @include clearfix;
+    }
+
+    li {
+        float: left;
+        width: $navigation-item-width;
+
+        @include media(max-width 1000px) {
+            width: $navigation-item-width-medium;
+        }
+    }
+
+    a {
+        color: $navigation-color;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        line-height: $navigation-height;
+        @include transition(all .25s linear);
+    }
+
+    a:hover {
+        color: $navigation-color-hover;
+    }
+
+    .logo {
+        background: url('/img/logo.png') center no-repeat;
+        width: $navigation-logo-width;
+        height: $navigation-height;
+        float: left;
+        margin-left: 20px;
+
+    }
+
+    .phone {
+        position: absolute;
+        top: -1.7em;
+        right: 5%;
+        color: transparentize(white, .1);
+        font-size: em(14);
+
+        @include media(max-width 500px) {
+            font-size: 1em;
+            top: .7em;
+        }
+    }
+
+    .icon-phone {
+        position: relative;
+        top: 3px;
+    }
+
+    @include media(max-width 800px) {
+        @include shrink-nav();
+
+        ul {
+            display: none;
+        }
+    }
+}
+
+//mobile menu styles
+
+.mobile-menu-button {
+    //border: 2px solid $primary-color-light;
+    background-color: $primary-color;
+    border-radius: 0;
+    position: absolute;
+    right: 0%;
+    height: 100%;
+    width: 5em;
+    //top: 7px;
+    display: none;
+
+    &:hover {
+        background-color: $primary-color-light;
+    }
+
+    @include media(max-width 800px) {
+        display: inline;
+    }
+
+}
+
+.mobile-menu-navigation {
+    font-family: $header-font-family;
+
+    @include position(fixed, 40px 0px auto 0px);
+    background-color: $primary-color-light;
+    z-index: 10000;
+    text-align: left;
+    display: none;
+
+
+    a {
+        color: transparentize(white, .2);
+        display: block;
+        padding: 1em;
+
+        &:hover {
+            background-color: $primary-color-medium;
+        }
+    }
+}
+
+.nav-small {
+    @include shrink-nav();
+
+}

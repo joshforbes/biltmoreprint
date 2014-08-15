@@ -1,0 +1,31 @@
+.recent-work {
+
+    .work-container {
+        width: 100%;
+        @include clearfix();
+    }
+
+    .work-item {
+        display: block;
+        width: 25%;
+        height: 100%;
+        padding-top: 18%;
+        float: left;
+        background: url('http://lorempixel.com/400/400') no-repeat center center;
+        background-size: cover;
+
+        @include media(max-width 1000px) {
+            width: 50%;
+            padding-top: 26%;
+        }
+
+        @include media(max-width 600px) {
+            width: 80%;
+            padding-top: 50%;
+            margin-left: 10%;
+            margin-bottom: 1em;
+        }
+    }
+
+}
+

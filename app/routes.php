@@ -11,7 +11,8 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
+Route::get('/', 'PagesController@home');
+
+Route::get('/services/{slug}', function($slug) {
+   return View::make('layouts.partials.services.' . $slug);
 });
