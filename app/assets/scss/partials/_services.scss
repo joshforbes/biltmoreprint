@@ -1,7 +1,4 @@
 .service {
-    padding-top: 6.25em;
-    padding-bottom: 6.25em;
-    background-color: lighten($light-gray, 10%);
     overflow-x: hidden;
     @include clearfix();
 

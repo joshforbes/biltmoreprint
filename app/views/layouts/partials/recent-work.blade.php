@@ -11,6 +11,6 @@
         <div class="work-item"></div>
         <div class="work-item"></div>
         <div class="work-item"></div>
-
     </div>
+
 </section>

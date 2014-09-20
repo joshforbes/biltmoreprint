@@ -360,6 +360,11 @@ th {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+.notransition, .notransition * {
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none; }
+
 button,
 input[type="submit"] {
   -webkit-font-smoothing: antialiased;
@@ -741,11 +746,11 @@ header {
 
 section {
   position: relative;
-  margin-top: 100px;
-  margin-bottom: 100px; }
+  margin-top: 6.25em;
+  margin-bottom: 6.25em; }
   section .section-header {
     text-align: center;
-    margin-bottom: 70px; }
+    margin-bottom: 4.375em; }
     section .section-header h2 {
       color: #0f2f43;
       font-size: 3.125em; }
@@ -760,8 +765,12 @@ section {
       height: 2px;
       background-color: #dddddd; }
 
+.alt-section {
+  padding-top: 6.25em;
+  padding-bottom: 6.25em;
+  background-color: #f7f7f7; }
+
 .about {
-  margin-top: 100px;
   max-width: 68em;
   margin-left: auto;
   margin-right: auto; }
@@ -840,9 +849,6 @@ section {
     font-size: 1.25em; }
 
 .service {
-  padding-top: 6.25em;
-  padding-bottom: 6.25em;
-  background-color: #f7f7f7;
   overflow-x: hidden; }
   .service:after {
     content: "";
@@ -993,7 +999,8 @@ section {
       list-style-position: inside; }
 
 .recent-work .work-container {
-  width: 100%; }
+  width: 100%;
+  padding-bottom: 2.5em; }
   .recent-work .work-container:after {
     content: "";
     display: table;

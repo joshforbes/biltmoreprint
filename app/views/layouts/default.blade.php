@@ -22,10 +22,18 @@
 <script>
 
     var navModule = (function() {
-       var s;
+        var s;
+
+        function disableTransition() {
+            if (($(document).scrollTop()) > 0) {
+                console.log(($(document).scrollTop()));
+                s.navContainer.addClass('notransition');
+            }
+        }
 
         function shrinkNav() {
-            if ($(document).scrollTop() > s.navShrinkThreshhold) {
+            console.log($(window).scrollTop());
+            if (($(document).scrollTop()) > s.navShrinkThreshhold) {
                 s.navContainer.addClass(s.navSmallClass);
             }
         }
@@ -57,6 +65,7 @@
 
             init: function() {
                 s = this.settings;
+                disableTransition();
                 bindUIactions();
             }
         }
@@ -118,8 +127,6 @@
     (function() {
             navModule.init();
             serviceModule.init();
-            //serviceLoad();
-            //serviceSlider();
         }());
 
 </script>

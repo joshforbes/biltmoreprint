@@ -104,14 +104,12 @@ header {
 //mobile menu styles
 
 .mobile-menu-button {
-    //border: 2px solid $primary-color-light;
     background-color: $primary-color;
     border-radius: 0;
     position: absolute;
     right: 0%;
     height: 100%;
     width: 5em;
-    //top: 7px;
     display: none;
 
     &:hover {
