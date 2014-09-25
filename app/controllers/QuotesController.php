@@ -10,7 +10,11 @@ class QuotesController extends \BaseController {
 	 */
 	public function index()
 	{
-		return 'show all quotes';
+		//fetch all quotes
+        $quotes = Quote::all();
+
+        //load a view to display them
+        return View::make('quotes.index', ['quotes' => $quotes]);
 	}
 
 	/**
