@@ -17,3 +17,4 @@ Route::get('/services/{slug}', function($slug) {
    return View::make('layouts.partials.services.' . $slug);
 });
 
+Route::resource('quotes', 'QuotesController');
