@@ -14,7 +14,8 @@ class QuotesController extends \BaseController {
         $quotes = Quote::all();
 
         //load a view to display them
-        return View::make('quotes.index', ['quotes' => $quotes]);
+        return View::make('quotes.index', compact('quotes'));
+
 	}
 
 	/**
@@ -48,7 +49,9 @@ class QuotesController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		$quote = Quote::findOrFail($id);
+
+        return View::make('quotes.show', compact('quote'));
 	}
 
 	/**
