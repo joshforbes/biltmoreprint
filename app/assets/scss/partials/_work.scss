@@ -1,0 +1,156 @@
+.work {
+    .work-container {
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 2.5em;
+        @include clearfix();
+    }
+
+    .work-wrap {
+        position: relative;
+        width: 32%;
+        display: block;
+        margin: .5%;
+        float: left;
+
+        @include media(max-width 1100px) {
+            width: 48%;
+        }
+
+        @include media(max-width 600px) {
+            width: 100%;
+            margin-bottom: 1em;
+        }
+    }
+
+    .work-item {
+        width: 100%;
+        padding-top: 80%;
+
+        background: no-repeat center center;
+        background-size: 150%;
+
+        @include transition(all .5s);
+
+    }
+
+    .pagination {
+        display: block;
+        text-align: center;
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            display: inline-block;
+            margin: 10px;
+            font-size: 1.5em;
+
+            .active, .disabled {
+                color: $primary-color;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: $accent-color;
+        }
+    }
+}
+
+.work-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba($primary-color, 0.72);
+    color: #fff;
+    text-align: center;
+
+
+    visibility: hidden;
+    opacity: 0;
+
+    @include transition( all .5s);
+
+    h3 {
+        font-size: 1.1em;
+        padding-top: 60%;
+    }
+
+}
+
+.work-wrap:hover .work-overlay {
+    visibility: visible;
+    opacity: 1;
+}
+
+.work-wrap:hover .work-item {
+    background-size: 170%;
+}
+
+//individual work page
+
+.work-single {
+    width: 70%;
+    margin: 4em auto;
+    position: relative;
+    color: white;
+    padding-bottom: 0;
+
+    @include media(max-width 1100px) {
+        width: 80%;
+    }
+
+    @include media(max-width 800px) {
+        width: 90%;
+    }
+
+    .work-image-wrap {
+        img {
+            width: 100%;
+        }
+    }
+
+    .work-detail {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 1.5em 2em;
+        background-color: rgba($primary-color, .6);
+
+        @include media(max-width 900px) {
+            padding: .75em 1em;
+        }
+
+        @include media(max-width 600px) {
+            position: relative;
+            background-color: $primary-color;
+        }
+    }
+
+    h3 {
+        padding-bottom: .2em;
+
+        @include media(max-width 900px) {
+            font-size: 1.2em;
+        }
+    }
+
+    p {
+        @include media(max-width 800px) {
+            font-size: .9em;
+        }
+    }
+
+    .back-to-work-link {
+        float: left;
+        color: $accent-color;
+        font-size: 1.3em;
+        padding: 1em 1em 2em;
+    }
+}

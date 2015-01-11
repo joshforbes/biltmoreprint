@@ -5,10 +5,24 @@
     height: em(650);
     overflow: hidden;
 
+    @include media(max-width 500px) {
+        background: $primary-color;
+        height: em(400);
+    }
+
+    @include media(max-width 400px) {
+        height: em(300);
+    }
+
     .splash {
         color: white;
         margin-top: em(300);
         text-align: center;
+
+        @include media(max-width 500px) {
+            background: $primary-color;
+            margin-top: em(100);
+        }
     }
 
     .highlight-one {
@@ -24,11 +38,30 @@
     h2 {
         font-size: em(60);
         margin-bottom: 20px;
+
+        @include media(max-width 700px) {
+            font-size: em(40);
+            margin-bottom: 10px;
+        }
+
+        @include media(max-width 400px) {
+            font-size: em(30);
+            margin-bottom: 7px;
+        }
     }
 
     h3 {
         font-size: em(50px);
         margin-bottom: 20px;
+
+        @include media(max-width 700px) {
+            font-size: em(40);
+            margin-bottom: 10px;
+        }
+        @include media(max-width 400px) {
+            font-size: em(20);
+            margin-bottom: 7px;
+        }
     }
 
     .highlight-background {

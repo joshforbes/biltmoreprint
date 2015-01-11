@@ -2,21 +2,21 @@
     @include outer-container();
 
     img {
-        position: absolute;
-        left: -57%;
-        top: 0%;
-        @include size(auto 650px);
-        z-index: 9999;
+         position: absolute;
+         left: -55%;
+         top: 0%;
+         @include size(auto 650px);
+         z-index: 9999;
 
-        @include media(max-width 1200px) {
-            left: -50%;
-        }
+         @include media(max-width 1200px) {
+             left: -50%;
+         }
 
-        @include media(max-width 1000px) {
-            display: none;
-        }
+         @include media(max-width 1000px) {
+             display: none;
+         }
 
-    }
+     }
 
     .about-content {
         @include span-columns(9);

@@ -1,0 +1,53 @@
+.client-form {
+    @include outer-container();
+    position: relative;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding-bottom: 1em;
+    background-color: #f4f4f4;
+    border: 3px solid $light-gray;
+    border-radius: 5px;
+
+    textarea {
+        height: 110px;
+    }
+
+    input[type="submit"] {
+        float: right;
+        margin-top: 1em;
+        margin-right: 4em;
+        background-color: $accent-color;
+        padding: 1em 2em;
+    }
+
+    .form-group {
+        margin: 5px 30px;
+    }
+
+    legend {
+        margin: 20px 30px;
+        font-size: 1.5em;
+    }
+}
+
+.contact-info {
+    @include span-columns(6);
+    margin: 0;
+
+    @include media(max-width 700px) {
+        @include span-columns(10);
+        @include shift(1);
+    }
+}
+
+.project-info {
+    @include span-columns(6);
+    margin: 0;
+
+    @include media(max-width 700px) {
+        @include span-columns(10);
+        @include shift(1);
+    }
+}
+
+

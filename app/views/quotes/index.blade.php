@@ -2,14 +2,7 @@
 
 @section('content')
 
-@foreach($quotes as $quote)
-
-{{$quote->name}}
-{{$quote->company}}
-<br>
-
-<div class="container-fluid">
-<h2 class="sub-header">Quotes</h2>
+<h1 class="page-header">Quotes</h1>
 <div class="table-responsive">
 <table class="table table-striped">
   <thead>
@@ -23,20 +16,18 @@
     </tr>
   </thead>
   <tbody>
+  @foreach($quotes as $quote)
     <tr>
       <td>{{ $quote->id }}</td>
       <td>{{ $quote->name }}</td>
       <td>{{ $quote->company }}</td>
       <td>{{ $quote->project }}</td>
-      <td>{{ link_to("quotes/$quote->id", 'view') }}</td>
-      <td>{{ link_to("quotes/$quote->id", 'completed') }}</td>
+      <td>{{ link_to_route('quotes.show', 'view', $quote->id) }}</td>
+      <td>{{ link_to_route('quotes.destroy', 'delete', $quote->id) }}</td>
     </tr>
+  @endforeach
   </tbody>
 </table>
 </div>
-</div>
-
-
-@endforeach
 
 @stop

@@ -2,7 +2,7 @@
 <div class="service-header">
     <i class="icon-mail"></i><h3>Mailing Services</h3><i class="icon-cancel-circled2 service-close"></i>
 </div>
-<img src="http://lorempixel.com/550/200" alt=""/>
+<img src="/img/services/mailing.jpg" alt=""/>
 
 <p>Our mailing services are a faster and more economical way to distribute your information.
 We ensure that your materials are printed and mailed according to postal regulations without
@@ -51,3 +51,5 @@ will be prepared accurately and double-checked for quality before we take it to 
 
 <p>Come to Biltmore Print for managed mailing services. Save time and money with our one-stop convenient
 solutions.</p>
+
+</article>

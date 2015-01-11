@@ -2,7 +2,7 @@
 <div class="service-header">
     <i class="icon-cog-alt"></i><h3>Variable Data</h3><i class="icon-cancel-circled2 service-close"></i>
 </div>
-<img src="http://lorempixel.com/550/200" alt=""/>
+<img src="/img/services/variable.jpg" alt=""/>
 
 <p>Customers respond well to friendly, face-to-face customer service, but how do you create that same connection
 in a postcard, letter, or direct mailer? Variable printing -- the technology we use to help your printed

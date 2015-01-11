@@ -1,0 +1,92 @@
+.contact-wrap {
+    @include outer-container;
+
+    .contact-info {
+        @include span-columns(6);
+        padding: 0 50px;
+
+        @include media(max-width 800px) {
+            @include span-columns(8);
+            @include shift(2);
+        }
+
+        @include media(max-width 600px) {
+            @include span-columns(10);
+            @include shift(1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .contact-email {
+            text-align: center;
+            color: $accent-color;
+            font-size: 1.2em;
+        }
+
+        h3 {
+            font-size: 1.3em;
+            color: $medium-gray;
+        }
+
+        .office-location {
+            @include span-columns(3 of 6);
+
+            @include media(max-width 700px) {
+                @include span-columns(8 of 8);
+            }
+
+        }
+
+        .office-hours {
+            @include span-columns(3 of 6);
+            padding-left: 3em;
+
+            @include media(max-width 700px) {
+                @include span-columns(8 of 8);
+
+                padding-left: 0em;
+            }
+        }
+
+        .map-wrap {
+            margin: 8em auto 0;
+
+
+            @include media(max-width 800px) {
+                margin-bottom: 3em;
+
+            }
+        }
+    }
+
+    .contact-form-wrap {
+        @include span-columns(6);
+        padding: 0 0 0 50px;
+
+        @include media(max-width 800px) {
+            @include span-columns(8);
+            @include shift(2);
+        }
+
+        @include media(max-width 600px) {
+            @include span-columns(10);
+            @include shift(1);
+        }
+
+        @include media(max-width 1000px) {
+            padding: 0 25px 0 50px;
+        }
+
+        h2 {
+            margin-bottom: .7em;
+        }
+
+        form {
+            input[type="submit"] {
+                background-color: $accent-color;
+            }
+        }
+    }
+}
