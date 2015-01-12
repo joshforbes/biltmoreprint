@@ -32,7 +32,7 @@ class ReceiveUploadHandler {
                 $this->clientFileRepository->create($file, $upload);
         }
 
-        Event::fire('upload.received', [$input['email']]);
+        Event::fire('upload.received', [$upload->toArray()]);
     }
 
 } 

@@ -32,7 +32,7 @@ class ReceiveQuoteRequestHandler {
                 $this->clientFileRepository->create($file, $quote);
         }
 
-        Event::fire('quote.received', [$input['email']]);
+        Event::fire('quote.received', [$quote->toArray()]);
     }
 
 } 

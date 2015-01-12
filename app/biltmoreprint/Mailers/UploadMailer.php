@@ -2,23 +2,21 @@
 
 namespace BiltmorePrint\Mailers;
 
+
 class UploadMailer extends Mailer{
 
-    /**
-     * @param $clientEmailAddress
-     */
-    public function sendUploadConfirmationTo($clientEmailAddress) {
+    public function sendUploadConfirmationTo($upload) {
         $subject = 'Your file upload has been received';
-        $view = 'emails.quotes.confirm';
+        $view = 'emails.uploads.confirm';
 
-        $this->sendTo($clientEmailAddress, $subject, $view);
+        $this->sendTo($upload['email'], $subject, $view);
 
     }
 
-    public function sendUploadNotificationTo() {
+    public function sendUploadNotificationTo($upload) {
         $subject = 'A file upload has been received';
-        $view = 'emails.quotes.notify';
+        $view = 'emails.uploads.notify';
 
-        $this->sendTo(ADMIN_EMAIL, $subject, $view);
+        $this->sendTo(ADMIN_EMAIL, $subject, $view, $upload);
     }
 }
