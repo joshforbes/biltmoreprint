@@ -1,4 +1,4 @@
 <?php
 
-define('ADMIN_EMAIL', 'job@biltmoreprint.com');
+define('ADMIN_EMAIL', 'jdforbes82@gmail.com');
 

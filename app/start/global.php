@@ -88,3 +88,5 @@ require app_path().'/filters.php';
 require app_path().'/constants.php';
 
 require app_path().'/observers.php';
+
+require app_path().'/helpers.php';

@@ -11,10 +11,11 @@
 |
 */
 
-function extract_fileName($path) {
-    $path = explode('/', $path);
-    return array_pop($path);
-}
+//Route::get('/', function() {
+//   Mail::send('emails.quotes.confirm', [], function($message){
+//        $message->to('jdforbes82@gmail.com')->subject('Test');
+//   });
+//});
 
 Route::get('/', [
     'as'   => 'home',
