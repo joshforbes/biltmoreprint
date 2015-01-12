@@ -14,7 +14,8 @@
         <h3>{{ $work->name }}</h3>
         <p>{{ $work->description }}</p>
     </div>
-    <a class="back-to-work-link" href="{{ route('work.index') }}"><< Go Back</a>
+    {{--<a class="back-to-work-link" href="{{ route('work.index') }}"><< Go Back</a>--}}
+    <a class="back-to-work-link" href="{{ URL::previous() }}"><< Go Back</a>
 
 </div>
 
