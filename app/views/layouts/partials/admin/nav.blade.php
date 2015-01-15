@@ -13,7 +13,7 @@
         <ul class="nav navbar-nav navbar-right">
           <li>{{ link_to_route('quotes.index', 'Quotes', [], ['class' => 'visible-xs-block']) }}</li>
           <li>{{ link_to_route('uploads.index', 'Uploads', [], ['class' => 'visible-xs-block']) }}</li>
-          <li>{{ link_to_route('work.index', 'Work', [], ['class' => 'visible-xs-block']) }}</li>
+          <li>{{ link_to_route('work.admin.index', 'Work', [], ['class' => 'visible-xs-block']) }}</li>
           <li>{{ link_to_route('logout', 'Logout') }}</li>
         </ul>
       </div>
