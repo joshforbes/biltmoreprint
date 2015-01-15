@@ -14,6 +14,11 @@ class WorkRepository {
         return Work::all();
     }
 
+    public function getAllWorkByCreatedDate($order = 'desc')
+    {
+        return Work::orderBy('created_at', $order)->get();
+    }
+
     /**
      * @param $id
      * @return \Illuminate\Support\Collection|static
@@ -55,6 +60,7 @@ class WorkRepository {
     {
         return Work::orderBy('created_at', 'desc')->paginate($perPage);
     }
+
 
 
 

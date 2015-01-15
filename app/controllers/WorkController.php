@@ -59,7 +59,7 @@ class WorkController extends \BaseController {
      */
     public function adminIndex()
     {
-        $work = $this->workRepository->getAllWork();
+        $work = $this->workRepository->getAllWorkByCreatedDate();
 
         return View::make('work.admin.index', compact('work'));
     }
