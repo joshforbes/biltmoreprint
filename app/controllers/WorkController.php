@@ -46,7 +46,7 @@ class WorkController extends \BaseController {
 	 */
 	public function index()
 	{
-        $paginatedWork = $this->workRepository->getPaginatedWork(9);
+        $paginatedWork = $this->workRepository->getPaginatedWork(12);
 
         return View::make('work.index', compact('paginatedWork'));
 	}
